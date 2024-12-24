@@ -1,0 +1,397 @@
+/* src/App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 15px;
+  background-color: #ffffff;
+  border-bottom: px solid #a16060;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+ 
+  font-size: 1.4rem;
+  color: #0056b3;
+  font-weight: 600;
+  transition: color 0.3s ease;
+ 
+}
+
+.logo h1:hover {
+  color: #00800b;
+}
+
+
+.phone-number {
+  padding-right: 70px;
+ margin-top: -16px;
+  font-size: 1rem;
+  color: #0044ff; /* You can change this color to suit your theme */
+  font-weight: 100;
+}
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  gap: -1px;
+  transition: all 0.4s ease;
+}
+
+.nav-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ffffff;
+  color: #003cff;
+}
+
+/* Hamburger Icon Styling */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 28px;
+  height: 3px;
+  background-color: #000000;
+  margin: 3px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu-toggle {
+   
+    display: flex;
+  }
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #e48585; /* Dark background for the footer */
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left, .footer-middle, .footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0015ff; /* Accent color */
+}
+
+.footer-description {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.footer-middle h4, .footer-right h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-middle ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-middle ul li {
+  margin-bottom: 8px;
+}
+
+.footer-middle ul li a {
+  color: #ffffff; /* Light gray text for links */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-middle ul li a:hover {
+  color: #004631; /* Highlight links on hover */
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.contact-item span {
+  font-size: 16px;
+  color: black;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: #6aff00;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0000ff; /* Highlight social icons on hover */
+}
+
+.footer-bottom {
+  background-color: #353434;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    font-size: 28px; /* Increase logo size for mobile */
+  }
+
+  .footer-middle ul {
+    padding: 0;
+  }
+
+  .footer-middle ul li {
+    margin-bottom: 12px; /* Increase spacing between list items */
+  }
+
+  .footer-right .social-links {
+    flex-direction: row; /* Display icons in a row */
+    justify-content: center; /* Center icons in the row */
+    gap: 20px; /* Increase space between icons for mobile */
+  }
+
+  .contact-item {
+    font-size: 16px; /* Slightly larger font size for readability */
+    margin-bottom: 15px;
+   color: #00eeff;
+  }
+ 
+  
+
+  .social-links {
+    gap: 20px; /* Increase space between icons for mobile */
+  }
+
+  .social-icon {
+    font-size: 22px; /* Larger icons for mobile */
+    padding: 10px;
+    color: #ece8e6;
+  }
+
+  .footer-bottom p {
+    font-size: 14px; /* Slightly larger text for footer bottom */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 20px; /* Reduce padding for very small screens */
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    width: 100%;
+  }
+
+  .footer-logo {
+    font-size: 32px; /* Even larger logo for very small screens */
+  }
+
+  .footer-middle ul li a {
+    font-size: 16px; /* Larger font size for links */
+  }
+
+  .social-icon {
+    font-size: 26px; /* Larger social icon size */
+    padding: 12px;
+  }
+}
+
+
+
+
+/* Mobile Menu Animation */
+.nav-links.open .nav-link {
+  animation: slideIn 0.3s ease-in;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* WhatsApp Chatbot Icon Styling */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* WhatsApp Green */
+  border-radius: 50%;
+  padding: 15px; /* Balanced padding for all screen sizes */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 10px #25D366; /* Subtle glow */
+  color: white;
+  font-size: 24px; /* Standard icon size */
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Effect */
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Subtle scaling */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3), 0 0 15px #25D366; /* Enhanced glow on hover */
+}
+
+/* Icon Styling */
+.whatsapp-icon i {
+  margin: 0;
+}
+
+/* Accessibility Focus State */
+.whatsapp-icon:focus {
+  outline: none;
+  box-shadow: 0 0 5px #25D366, 0 0 10px #25D366; /* Focus glow for keyboard navigation */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .whatsapp-icon {
+      bottom: 15px;
+      right: 15px;
+      padding: 12px; /* Adjust padding for smaller screens */
+      font-size: 32px; /* Slightly smaller icon size */
+  }
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1200px) {
+  .whatsapp-icon {
+      bottom: 25px;
+      right: 25px;
+      padding: 18px; /* Increased padding for larger screens */
+      font-size: 32px; /* Larger icon size */
+  }
+}
+
+
+
+

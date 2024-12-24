@@ -1,0 +1,641 @@
+/* Home.css */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Overall Hero Section Styling */
+.hero {
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff, #ffffff); /* Gradient Background */
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Content Styling */
+.hero-content {
+  max-width: 600px;
+  animation: fade-in 1.5s ease-in-out;
+}
+
+/* Animation for Hero Content */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading Styling */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(207, 199, 199, 0.3);
+  background: linear-gradient(to right, #ff0000, #efe5c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-glow 2s infinite alternate;
+}
+
+
+
+/* Paragraph Styling */
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background: linear-gradient(to right, #ff6b6b, #ffcc33);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.5);
+}
+
+.cta-button:hover {
+  background: linear-gradient(to right, #ffcc33, #ff6b6b);
+  box-shadow: 0 6px 15px rgba(255, 204, 51, 0.7);
+  transform: translateY(-5px);
+}
+
+
+
+
+
+/* About Section */
+.about {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #121212;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #555;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.about .cta-button {
+  padding: 15px 30px;
+  background-color: #00FFB3;
+  color: #121212;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about .cta-button:hover {
+  background-color: #FF6B6B;
+  transform: scale(1.05);
+}
+
+
+
+/* Carousel Container Styling */
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Carousel Animation */
+.carousel {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.offer-item {
+  flex: 0 0 300px;
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  color: #34495e;
+  border-radius: 12px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.offer-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(52, 73, 94, 0.2);
+}
+
+.offer-item h4 {
+  font-size: 1.4rem;
+  color: #2980b9;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.offer-item p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 250px;
+  margin: auto;
+}
+
+
+
+
+/* Courses Section */
+.courses {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.courses h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.course-list {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  scroll-snap-type: x mandatory; /* Enabling scroll snap */
+  padding: 10px;
+}
+
+.course-item {
+  flex: 0 0 auto; /* Prevent items from shrinking or growing */
+  width: 250px; /* Set a fixed width for each course item */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  scroll-snap-align: start; /* Align each item to the left edge when snapping */
+  transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.course-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Course Text Styling */
+.course-item h3 {
+  font-size: 1.25em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.course-item p {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.course-item p:first-of-type {
+  font-weight: bold;
+  color: #444;
+}
+
+.course-item p:last-of-type {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Ensure smooth scrolling on mobile */
+@media (max-width: 768px) {
+  .course-list {
+    gap: 15px;
+  }
+
+  .course-item {
+    width: 200px; /* Slightly smaller items on mobile */
+  }
+}
+
+
+/* Student's Feedback Section */
+.feedback {
+  background-color: #fafafa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.feedback h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.feedback-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.feedback-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.feedback-item h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.feedback-item p:last-child {
+  font-style: italic;
+  color: #777;
+}
+
+/* Call-to-Action Section */
+.call-to-action {
+  background-color: #ff6b6b;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.call-to-action h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #121212;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  background-color: #00ffb3;
+  transition: background-color 0.3s ease;
+}
+
+/* Certificate Sample Section */
+#certificate-sample {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+#certificate-sample h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Ongoing Projects Section */
+.ongoing-projects {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.ongoing-projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  color: #ff2f00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .course-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feedback-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about h2, .courses h2, .feedback h2, .call-to-action h2 {
+    font-size: 2rem;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-list {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .course-item, .feedback-item, .project-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .about p, .feedback-item p, .project-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.google-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+iframe {
+  max-width: 100%;
+  height: 600px; /* Adjust height as needed */
+}
+/* src/components/CircularImagesSection.css */
+
+/* Styling the section container */
+.circular-images-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.circular-images-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for all circular images */
+.circular-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Space between the circular images */
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+/* Styling for each circular image */
+.circular-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better look */
+}
+
+.circular-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fit well within the circle */
+}
+.unique-team-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.unique-team-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.unique-team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.unique-team-card {
+  text-align: center;
+}
+
+.unique-team-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unique-team-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.unique-team-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 3px;
+  color: #222;
+}
+
+.unique-team-role {
+  font-size: 14px;
+  color: #666;
+}
+.demo-classes-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.demo-classes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.demo-class-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.demo-class-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.demo-class-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.demo-class-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.demo-class-button {
+  background-color: #00FFB3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.demo-class-button:hover {
+  background-color: #00d4a0;
+}

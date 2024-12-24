@@ -1,0 +1,110 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General body styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+   
+  }
+  
+  /* Container for the entire page */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main heading */
+  h1 {
+    font-size: 2.5rem;
+    color: #004d99;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Section headers */
+  h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  /* Ordered and Unordered Lists */
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  li strong {
+    color: #004d99;
+  }
+  
+  /* Style for the links */
+  a {
+    color: #004d99;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    color: #004d99;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  
+    li {
+      font-size: 0.95rem;
+    }
+  }
+  

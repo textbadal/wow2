@@ -1,0 +1,18 @@
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+  }
+  
+  .thank-you-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you-container p {
+    font-size: 18px;
+  }
+  
